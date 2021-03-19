@@ -18,7 +18,11 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      playerNumber: null
+      playerNumber: null,
+      opponents: [
+        'opponent1',
+        'opponent2'
+      ]
     };
   }
 
@@ -42,7 +46,7 @@ class App extends Component {
           <Route 
             path='/Game' 
             render={() => {
-              return <Game playerNumber={this.state.playerNumber}/>
+              return <Game playerNumber={this.state.playerNumber} opponents={this.state.opponents} />
             }} 
           />
           {/* <Route path='/game' render={Game} /> */}
