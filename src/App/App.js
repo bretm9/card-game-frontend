@@ -12,8 +12,8 @@ function App() {
   return (
     <main>
       <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/game' component={Game} />
+        <Route exact path='/' render={Game} />
+        {/* <Route path='/game' render={Game} /> */}
         <Redirect to='/' />
       </Switch>
     </main>
