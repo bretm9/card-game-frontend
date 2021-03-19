@@ -36,7 +36,13 @@ class App extends Component {
             exact 
             path='/' 
             render={() => {
-              return <Game join={this.join} playerNumber={this.state.playerNumber}/>
+              return <Home join={this.join} />
+            }} 
+          />
+          <Route 
+            path='/Game' 
+            render={() => {
+              return <Game playerNumber={this.state.playerNumber}/>
             }} 
           />
           {/* <Route path='/game' render={Game} /> */}
