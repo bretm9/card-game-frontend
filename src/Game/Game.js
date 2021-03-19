@@ -1,16 +1,12 @@
 import React from 'react';
-import io from 'socket.io-client';
 
-const ENDPOINT = 'localhost:9000'
-let socket;
-
-function Game() {
-  socket = io(ENDPOINT);
-  return (
+const Game = (props) => {
+  return ( 
     <div>
-      
+      <button onClick={props.join}>Join Game</button>
+      <h1>You are player {props.playerNumber}</h1>
     </div>
   )
 }
 
-export default Game
+export default Game;
